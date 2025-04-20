@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+    <link rel="stylesheet" href="Styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joti+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="getlist.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="navContainer">
+        <div class="topNav">
+          <div class="left">
+            
+            <div id="google_translate_element">
+            </div>
+           <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+           <script>
+           function googleTranslateElementInit() {
+           new google.translate.TranslateElement(
+           {
+               pageLanguage: 'en',
+               includedLanguages: 'en,mr,hi' // Specify the languages you want to support (English and Marathi)
+           },
+               'google_translate_element'
+           );  
+               }
+    </script>
+          </div>
+          <div class="right">
+            <div class="help">
+              <a href="#help" style="text-decoration: none; color: white"
+                >Help</a
+              >
+              <div class="que"><i class="fa fa-question"></i></div>
+            </div>
+            |
+            <div class="feedback">
+              <button class="btn_Solid">feedback</button>
+            </div>
+          </div>
+        </div>
+        <div class="bottomNav">
+          <div class="container">
+            <div class="leftt">
+              <div class="logo" style="display: flex; gap: 2%">
+                <h2 class="darkG" style="color: rgb(95, 90, 90)">FIN</h2>
+                <h2 class="lightG" style="color: rgb(171, 169, 169)">CODERS</h2>
+                <i class="fa fa-pagelines" style="color: rgb(76, 186, 76)"></i>
+              </div>
+              <div>
+                <p class="statement">PLANNING MADE EASY</p>
+              </div>
+            </div>
+            <div class="rightt">
+              <a class="navItems bebas-neue-regular" href="IndexN.html">HOME</a>
+              <a class="navItems bebas-neue-regular" href="getList.html"
+                >GET LIST</a
+              >
+              <a class="navItems bebas-neue-regular" href="#footer1"
+                >FEEDBACK</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContainer">
+        <div class="inputDiv">
+          <img src="./images/crop.jpg" alt="crop" class="img2" />
+
+          <div class="Inputcontainer">
+            <p class="details bebas-neue-regular">Please enter details</p>
+            <form action="">
+              <div class="region">
+                <label class="bebas-neue-regular" for="Region"
+                  >Choose Region</label
+                >
+                <select id="Region" name="Region">
+                  <option>Select region</option>
+                  <option value="ratnagiri">Ratnagiri</option>
+                  <option value="nashik">Nashik</option>
+                  <option value="nagpur">Nagpur</option>
+                </select>
+              </div>
+              <div class="season">
+                <label class="bebas-neue-regular" for="Season"
+                  >Choose Season</label
+                >
+                <select id="Season" name="Season">
+                  <option>Select season</option>
+                  <option value="rabi">Rabi</option>
+                  <option value="kharif">Kharif</option>
+                </select>
+              </div>
+              <div class="btn" style="display: flex; justify-content: center">
+                <button
+                  class="getBtn bebas-neue-regular"
+                  onclick="redirectToPage(event)"
+                >
+                  Get List
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //    function redirectToPage() {
+      // const region = document.getElementById("Region").value;
+      // const season = document.getElementById("Season").value;
+
+      // if (region && season) {
+      //   let pageUrl = displayCrop${region.charAt(0).toUpperCase() + region.slice(1)}.html;
+      //   console.log("Hello");
+      //   window.location.replace(pageUrl);
+      // } else {
+      //   alert("Please select both region and season.");
+      // }
+      //     }
+
+      function redirectToPage(event) {
+        event.preventDefault();
+        const region = document.getElementById("Region").value;
+        const season = document.getElementById("Season").value;
+
+        console.log("Region:", region);
+        console.log("Season:", season);
+
+        if (region && season) {
+          let pageUrl = `displayCrop${
+            region.charAt(0).toUpperCase() + region.slice(1)}.html`;
+          // Append query parameters to the URL
+          pageUrl += `?Region=${region}&Season=${season}`;
+
+          console.log("Redirecting to:", pageUrl);
+          window.location.replace(pageUrl);
+        } else {
+          console.log("Both region and season are required."); // Check if this log is displayed
+          alert("Please select both region and season.");
+        }
+      }
+    </script>
+  </body>
+</html>

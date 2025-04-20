@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="Styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joti+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="displaycrop.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="navContainer">
+            <div class="topNav">
+                <div class="left">
+                  <div id="google_translate_element">
+                  </div>
+                 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                 <script>
+                 function googleTranslateElementInit() {
+                 new google.translate.TranslateElement(
+                 {
+                     pageLanguage: 'en',
+                     includedLanguages: 'en,mr,hi' // Specify the languages you want to support (English and Marathi)
+                 },
+                     'google_translate_element'
+                 );  
+                 }
+          </script>
+                </div>
+                <div class="right">
+                    <div class="help">
+                        <a href="#help" style="text-decoration: none; color: white;">Help</a>
+                        <div class="que"><i class="fa fa-question"></i></div>
+                    </div>
+                    |
+                    <div class="feedback">
+                        <button class="btn_Solid">
+                            feedback
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomNav">
+                <div class="container">
+                    <div class="leftt">
+                        <div class="logo" style="display: flex; gap: 2%;">
+                            <h2 class="darkG" style="color: rgb(95, 90, 90);">FIN</h2>
+                            <h2 class="lightG" style="color: rgb(171, 169, 169);">CODERS</h2>
+                            <i class="fa fa-pagelines" style="color: rgb(76, 186, 76);"></i>
+                        </div>
+                        <div>
+                            <p class="statement">PLANNING MADE EASY</p>
+                        </div>
+                    </div>
+                    <div class="rightt">
+                        <a class="navItems bebas-neue-regular" href="IndexN.html">HOME</a>
+                        <a class="navItems bebas-neue-regular" href="getList.html">GET LIST</a>
+                        <a class="navItems bebas-neue-regular" href="feedback">FEEDBACK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main2 row" >
+      <!-- Sidebar -->
+      <div class="side col-md-3 col-lg-3">
+        <div class="sidebar bg-gray-500 " >
+          <h3>Filters</h3>
+          <div class="filter-section">
+            <h4>Category</h4>
+            <ul>
+              <li><input type="checkbox" id="category1"> <label for="category1">Category 1</label></li>
+              <li><input type="checkbox" id="category2"> <label for="category2">Category 2</label></li>
+              <!-- Add more categories -->
+            </ul>
+          </div>
+          <div class="filter-section">
+            <h4>Soil Type</h4>
+            <ul>
+              <li><input type="checkbox" id="soil1"> <label for="soil1">Clay</label></li>
+              <li><input type="checkbox" id="soil2"> <label for="soil2">Sandy</label></li>
+              <!-- Add more soil types -->
+            </ul>
+          </div>
+          <div class="filter-section">
+            <h4>Water</h4>
+            <ul>
+              <li><input type="checkbox" id="water1"> <label for="water1">Low</label></li>
+              <li><input type="checkbox" id="water2"> <label for="water2">Medium</label></li>
+              <li><input type="checkbox" id="water3"> <label for="water3">High</label></li>
+              <!-- Add more water options -->
+            </ul>
+          </div>
+          <div class="filter-section">
+            <h4>Equipment</h4>
+            <ul>
+              <li><input type="checkbox" id="equip1"> <label for="equip1">Shovels</label></li>
+              <li><input type="checkbox" id="equip2"> <label for="equip2">Watering Cans</label></li>
+              <!-- Add more equipment options -->
+            </ul>
+          </div>
+          <!-- Add more filter sections as needed -->
+        </div>
+      </div>
+
+      <!-- Crop Containers -->
+      <div class="col-md-9 col-lg-9">
+        <div class="row mt-4">
+          <!-- Crop 1 onion-->
+          <div class="col-md-4 col-lg-4">
+            <div class="card">
+              <a href="/newOnion.html?crop=onion"><img src="./images/onion1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Onion</h5>
+                <p class="card-text">Short intro about the crop.</p>
+                 <span>
+    <img src="./images/sunny.png" width="15%" height="15%" class="sun" style="border-radius: 50%; border: none; float: right;" title="Summer">
+    <img src="./images/soil.png" width="15%" height="15%" class="rain" style="border-radius: 50%; border: none; float: right;" title="Black Soil
+    ">
+  </span></div>
+            </div>
+          </div>
+          <!-- Crop 2 Tomato -->
+          <div class="col-md-4 col-lg-4">
+            <div class="card">
+              <a href="/newOnion.html?crop=tomato"><img src="./images/tomato.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Tomato</h5>
+                <p class="card-text">Short intro about the crop.</p>
+                 <span>
+    <img src="./images/sunny.png" width="15%" height="15%" class="sun" style="border-radius: 50%; border: none; float: right;" title="Summer">
+    <img src="./images/soil.png" width="15%" height="15%" class="rain" style="border-radius: 50%; border: none; float: right;" title="Black Soil
+    ">
+  </span></div>
+            </div>
+          </div>
+          <!-- Crop 3 Grapes-->
+          <div class=" col-md-4 col-lg-4">
+            <div class="card">
+              <a href="/newOnion.html?crop=grape"><img src="./images/grapes1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Grapes</h5>
+                <p class="card-text">Short intro about the crop.</p>
+                <span>
+    <img src="./images/sunny.png" width="15%" height="15%" class="sun" style="border-radius: 50%; border: none; float: right;" title="Summer">
+    <img src="./images/soil.png" width="15%" height="15%" class="rain" style="border-radius: 50%; border: none; float: right;" title="Black Soil
+    ">
+  </span> </div>
+            </div>
+          </div>
+        </div>
+         <div class="row mt-4">
+          <!-- Crop 1 -->
+          <div class="col-md-4 col-lg-4">
+            <div class="card">
+              <img src="./images/brinjal.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Brinjal</h5>
+                <p class="card-text">Short intro about the crop.</p>
+                 <span>
+    <img src="./images/sunny.png" width="15%" height="15%" class="sun" style="border-radius: 50%; border: none; float: right;" title="Summer">
+    <img src="./images/soil.png" width="15%" height="15%" class="rain" style="border-radius: 50%; border: none; float: right;" title="Black Soil
+    ">
+  </span></div>
+            </div>
+          </div>
+          <!-- Crop 2 -->
+          <div class="col-md-4 col-lg-4">
+            <div class="card">
+              <img src="./images/fenugreek.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Fenugreek</h5>
+                <p class="card-text">Short intro about the crop.</p>
+               <span>
+    <img src="./images/sunny.png" width="15%" height="15%" class="sun" style="border-radius: 50%; border: none; float: right;" title="Summer">
+    <img src="./images/soil.png" width="15%" height="15%" class="rain" style="border-radius: 50%; border: none; float: right;" title="Black Soil
+    ">
+  </span> </div>
+            </div>
+          </div>
+          <!-- Crop 3 -->
+          <div class="rounded-30 col-md-4 col-lg-4">
+            <div class="card">
+              <img src="./images/okra.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Okra</h5>
+                <p class="card-text">Short intro about the crop.</p>
+               <span>
+    <img src="./images/sunny.png" width="15%" height="15%" class="sun" style="border-radius: 50%; border: none; float: right;" title="Summer">
+    <img src="./images/soil.png" width="15%" height="15%" class="rain" style="border-radius: 50%; border: none; float: right;" title="Black Soil
+    ">
+  </span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</body>
+
+</html>

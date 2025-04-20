@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../newOnion"
+		},
+		{
+			"path": "../CropCoders"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mainN"
+	}
+}
