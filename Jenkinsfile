@@ -12,9 +12,20 @@ pipeline {
                 echo 'Testing crop planing project'
             }
         }
-        stage('Docker build and Deploy') {
+    
+        stage('Build Docker Image') {
             steps {
-                echo 'Building containers and Deploying the crop planing project from CI CD pipeline'
+                sh 'docker build -t crop-price-website .'
+            }
+        }
+
+        stage('Run Docker Container') {
+            steps {
+                sh '''
+                    docker stop crop-price-container || true
+                    docker rm crop-price-container || true
+                    docker run -d -p 80:80 --name crop-price-container crop-price-website
+                '''
             }
         }
     }
