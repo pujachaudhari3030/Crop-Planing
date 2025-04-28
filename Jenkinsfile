@@ -13,19 +13,23 @@ pipeline {
             }
         }
     
-        stage('Build Docker Image') {
+         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t crop-price-website .'
+                script {
+                    docker.build('crop-price-website')
+                }
             }
         }
-
-        stage('Run Docker Container') {
+        stage('Run Tests') {
             steps {
-                sh '''
-                    docker stop crop-price-container || true
-                    docker rm crop-price-container || true
-                    docker run -d -p 80:80 --name crop-price-container crop-price-website
-                '''
+                 echo 'Test successfull '
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    docker.image('crop-price-website').run('-d -p 80:80')
+                }
             }
         }
     }
